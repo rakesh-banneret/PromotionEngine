@@ -55,5 +55,18 @@ namespace PromotionEngineTest
 
             Assert.AreEqual(expectedPrice, result);
         }
+
+        [Test]
+        public void AllPromoTest()
+        {
+            var pEngine = new PromoEngine(new List<IPromotion> { new NItemsPromotion("A", 3, 130),
+                new NItemsPromotion("B", 2, 45), new AndPromotion(new[]{"C","D" }, 30), new DefaultPromotion() });
+
+            var orderList = new Dictionary<string, int> { { "A", 5 }, { "B", 5 }, { "C", 1 } };
+
+            var result = pEngine.CalculatePrice(priceList, orderList);
+
+            Assert.AreEqual(370, result);
+        }
     }
 }
