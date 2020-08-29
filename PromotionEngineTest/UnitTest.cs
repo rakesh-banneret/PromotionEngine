@@ -57,6 +57,19 @@ namespace PromotionEngineTest
         }
 
         [Test]
+        public void MultipleNItems()
+        {
+            var pEngine = new PromoEngine(new List<IPromotion> { new NItemsPromotion("A", 3, 130),
+                new NItemsPromotion("B", 2, 45), new DefaultPromotion() });
+
+            var orderList = new Dictionary<string, int> { { "A", 3 }, { "B", 3 } };
+
+            var result = pEngine.CalculatePrice(priceList, orderList);
+
+            Assert.AreEqual(205, result);
+        }
+
+        [Test]
         public void AllPromoTest()
         {
             var pEngine = new PromoEngine(new List<IPromotion> { new NItemsPromotion("A", 3, 130),
