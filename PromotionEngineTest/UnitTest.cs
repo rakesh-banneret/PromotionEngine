@@ -1,8 +1,8 @@
 using NUnit.Framework;
-using System.Collections.Generic;
-using PromotionEngine.Engine;
 using PromotionEngine.Contracts;
+using PromotionEngine.Engine;
 using PromotionEngine.Modules;
+using System.Collections.Generic;
 
 namespace PromotionEngineTest
 {

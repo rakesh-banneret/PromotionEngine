@@ -6,7 +6,7 @@ namespace PromotionEngine
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("No UI for the Project - so please run the Unit test cases to check the logic");
         }
     }
 }
