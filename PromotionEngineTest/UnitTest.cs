@@ -25,5 +25,16 @@ namespace PromotionEngineTest
 
             Assert.AreEqual(100, result);
         }
+
+        [Test]
+        public void DefaultPromotion2()
+        {
+            var pEngine = new PromoEngine();
+            var orderList = new Dictionary<string, int> { { "A", 1 }, { "B", 1 }, { "C", 1 }, { "D", 1 } };
+
+            var result = pEngine.CalculatePrice(priceList, orderList);
+
+            Assert.AreEqual(115, result);
+        }
     }
 }

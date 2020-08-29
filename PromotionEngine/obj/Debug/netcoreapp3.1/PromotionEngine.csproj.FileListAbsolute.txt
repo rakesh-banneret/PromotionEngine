@@ -4,7 +4,6 @@ D:\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.runti
 D:\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.runtimeconfig.dev.json
 D:\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.dll
 D:\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.pdb
-D:\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.csprojAssemblyReference.cache
 D:\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.AssemblyInfoInputs.cache
 D:\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.AssemblyInfo.cs
 D:\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.csproj.CoreCompileInputs.cache
