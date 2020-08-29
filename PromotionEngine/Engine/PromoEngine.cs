@@ -1,20 +1,18 @@
 ﻿using PromotionEngine.Contracts;
 using PromotionEngine.Modules;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 
 namespace PromotionEngine.Engine
 {
-    public class PromotionEngine
+    public class PromoEngine
     {
         ReadOnlyCollection<IPromotion> promotions;
 
-        public PromotionEngine() : this(new List<IPromotion> { new DefaultPromotion() }) { }
+        public PromoEngine() : this(new List<IPromotion> { new DefaultPromotion() }) { }
 
-        public PromotionEngine(IList<IPromotion> promotions)
+        public PromoEngine(IList<IPromotion> promotions)
         {
             this.promotions = new ReadOnlyCollection<IPromotion>(promotions);
         }

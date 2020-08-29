@@ -9,7 +9,14 @@ namespace PromotionEngine.Modules
     {
         public double CalculatePrice(IDictionary<string, double> priceList, IDictionary<string, int> orderList)
         {
-            throw new NotImplementedException();
+            var total = 0.0;
+
+            foreach (var item in orderList)
+            {
+                total += priceList[item.Key] * item.Value;
+            }
+
+            return total;
         }
     }
 }
