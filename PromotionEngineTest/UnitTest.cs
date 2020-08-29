@@ -1,6 +1,8 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using PromotionEngine.Engine;
+using PromotionEngine.Contracts;
+using PromotionEngine.Modules;
 
 namespace PromotionEngineTest
 {
@@ -35,6 +37,23 @@ namespace PromotionEngineTest
             var result = pEngine.CalculatePrice(priceList, orderList);
 
             Assert.AreEqual(115, result);
+        }
+
+        [Test]
+        [TestCase(1, 50)]
+        [TestCase(2, 100)]
+        [TestCase(3, 130)]
+        [TestCase(5, 230)]
+        [TestCase(7, 310)]
+        public void NItemsTest2(int Qty, double expectedPrice)
+        {
+            var pEngine = new PromoEngine(new List<IPromotion> { new NItemsPromotion("A", 3, 130), new DefaultPromotion() });
+
+            var orderList = new Dictionary<string, int> { { "A", Qty } };
+
+            var result = pEngine.CalculatePrice(priceList, orderList);
+
+            Assert.AreEqual(expectedPrice, result);
         }
     }
 }
